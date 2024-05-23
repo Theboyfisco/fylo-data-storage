@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  background-color: hsl(229, 57%, 11%);
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+}
+
+.bg-img {
+  background: url("../images/bg-desktop.png") no-repeat center/cover;
+  position: absolute;
+  height: 50vh;
+  border-top-left-radius: 200px;
+  width: 100%;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+.box {
+  display: flex;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+  width: 90%;
+  margin-top: 35vh;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 200px;
+  gap: 40px;
+}
+
+.Fylo {
+  height: 190px;
+  width: 270px;
+  background-color: hsl(228, 56%, 26%);
+  padding: 30px;
+  line-height: 70px;
+  border-radius: 10px;
+  border-top-right-radius: 45%;
+}
+
+.fylo-icons {
+  display: flex;
+  align-items: center;
+}
+
+.fylo-icons img {
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
+  padding: 10px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 10px;
+}
+
+.data {
+  height: 140px;
+  background-color: hsl(228, 56%, 26%);
+  width: 480px;
+  color: hsl(229, 7%, 55%);
+  position: relative;
+  border-radius: 10px;
+}
+
+.Speech-bubble {
+  width: 180px;
+  height: 70px;
+  background-color: white;
+  position: absolute;
+  bottom: 120px;
+  left: 260px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+}
+
+.Speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 160px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.Speech-bubble p {
+  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.Speech-bubble p span {
+  font-size: 2.3rem;
+  padding-right: 5px;
+}
+
+.data-content {
+  padding: 20px;
+}
+
+.data-content p {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 200;
+}
+
+.bar {
+  margin-top: 20px;
+  width: 95%;
+  height: 15px;
+  border-radius: 10px;
+  background-color: hsl(229, 57%, 11%);
+}
+
+.bar-content {
+  border-radius: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  position: relative;
+}
+
+.circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 96%;
+}
+
+.gbs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.gbs p {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  #container {
+    background: url("../images/bg-mobile.png") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .bg-img {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .box-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .Fylo {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  .data {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .Speech-bubble {
+    left: 50%;
+    transform: translateX(-50%) translateY(270%);
+  }
+
+  .Speech-bubble::after {
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box-content {
+    margin-left: 0;
+  }
+
+  .Fylo {
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .fylo
+-icons img{
+    height: 50px;
+    width: 50px;
+  }
+
+  .data {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .Speech-bubble {
+    width: 80%;
+    left: 50%;
+    
+  }
+
+  .Speech-bubble::after {
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+  .Speech-bubble p {
+    font-size: 1.5rem;
+  }
+
+  .Speech-bubble p span {
+    font-size: 2rem;
+  }
+
+  .data-content p {
+    font-size: 1rem;
+  }
+
+  .bar {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .bar-content {
+    width: 75%;
+  }
+
+  .circle {
+    left: 94%;
+  }
+
+  .gbs {
+    gap: 50%;
+    font-size: 0.9rem;
+  }
+}
